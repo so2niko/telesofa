@@ -9,6 +9,9 @@ export class ModelMessages{
         this.apiToken = localStorage.getItem('apiToken');
         return fetch(this.urlUpd).then(d => d.json()).then(data => {
             this.updates = data;
+            this.updates.result.forEach(upd=>{
+                upd.message = upd.message || upd.edited_message;
+            });
             this.saveUsers();
         });
     }

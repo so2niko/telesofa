@@ -7,6 +7,8 @@ export class ViewSpamer{
     renderSpamer(){
         this.dom.innerHTML = this.template.getSpamerHTML();
         this.select = document.querySelector('.users-select');
+        this.btnSend = document.querySelector('.btn-send-msg-to');
+        this.textArea = document.querySelector('.text-area-msg');
     }
 
     linkDOMElements(){
@@ -15,5 +17,17 @@ export class ViewSpamer{
 
     renderOptions(users){
         this.select.innerHTML = this.template.getOptions(users);
+    }
+
+    addListeners(listeners){
+        this.btnSend.addEventListener('click', listeners.sendMsg);
+    }
+
+    getSelectMenu(){
+        return this.select.value;
+    }
+
+    getText(){
+        return this.textArea.value;
     }
 }

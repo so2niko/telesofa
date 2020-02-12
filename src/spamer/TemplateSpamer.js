@@ -6,11 +6,11 @@ export class TemplateSpamer{
                 
             </select>
             <div class="input-group-append">
-                <button class="btn btn-outline-primary btn-send-msg" type="button"><i class="far fa-paper-plane"></i> Send</button>
+                <button class="btn btn-outline-primary btn-send-msg-to" type="button"><i class="far fa-paper-plane"></i> Send</button>
             </div>
         </div>
         <div class="form-group mt-2">
-            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" autofocus></textarea>
+            <textarea class="form-control text-area-msg" rows="3" autofocus></textarea>
         </div>
     </div>`;
     }

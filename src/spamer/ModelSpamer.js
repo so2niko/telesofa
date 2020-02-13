@@ -17,7 +17,7 @@ export class ModelSpamer{
     }
 
     sendMsg(receiver, text = 'Hello, user! This is test message.'){
-        this.apiToken || this.apiToken = localStorage.getItem('apiToken');
+        this.apiToken = this.apiToken ? this.apiToken: localStorage.getItem('apiToken');
         fetch(`${this.urlSendMsg}chat_id=${receiver}&text=${text}`);
     }
 }
